@@ -59,7 +59,7 @@ const VistaInvitados = () => {
                         placeholder="Buscar..."
                         value={searchBox}
                         onChange={handleSearch}
-                        className="searchInputINVITADOS"
+                        className="searchInput"
                     />
                     {searchBox ? (
                         <FontAwesomeIcon
@@ -70,7 +70,7 @@ const VistaInvitados = () => {
                     ) : (
                         <FontAwesomeIcon
                             icon={faMagnifyingGlass} // Ícono de búsqueda (lupa)
-                            className="searchIconINVITADOS"
+                            className="searchIcon"
                         />
                     )}
                 </div>

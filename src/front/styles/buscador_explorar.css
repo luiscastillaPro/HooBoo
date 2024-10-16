@@ -40,7 +40,6 @@
 .searchIcon {
     position: absolute; 
     right: 15px;
-    color: #ccc;
     pointer-events: none;
     font-size: 18px;
 }

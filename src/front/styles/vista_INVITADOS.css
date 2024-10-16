@@ -121,7 +121,7 @@
     margin-top: -1rem;
 }
 
-.searchInputINVITADOS {
+/* .searchInputINVITADOS {
     padding: 10px 40px 10px 15px;
     font-size: 16px;
     width: 40vw;
@@ -129,7 +129,8 @@
     border-radius: 25px;
     border: 1px solid #a75df2;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-}
+    background-color: rgb(201, 200, 200);
+} */
 
 /* Ícono de lupa (inicial) */
 .searchIconINVITADOS {
@@ -148,7 +149,6 @@
 .clearSearchIcon {
     position: absolute;
     right: 20px;
-    color: #ccc;
     cursor: pointer;
     font-size: 18px;
 }

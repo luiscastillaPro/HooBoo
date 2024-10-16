@@ -1,7 +1,7 @@
 .footer-colapsado {
     position: fixed;
-    bottom: 1vh; 
-    left: 50%;
+    bottom: 0.4vh; 
+    left: 56%;
     z-index: 10000;
     transform: translateX(-50%); 
 }

@@ -47,7 +47,6 @@
 .searchIcon {
   position: absolute;
   right: 20px;
-  color: #ccc;
   pointer-events: none;
   font-size: 18px;
 }
@@ -55,7 +54,6 @@
 .clearSearchIcon {
   position: absolute;
   right: 45px;
-  color: #ccc;
   cursor: pointer;
   font-size: 18px;
 }
@@ -68,7 +66,7 @@
   text-align: center;
   font-family: 'Special Elite', cursive;
   font-size: 1.7rem;
-  margin: 10vh 0; /* Ajustar márgenes para móviles */
+  margin: 10vh 0 10vh 28vh;
 }
 
 .loading-container {
