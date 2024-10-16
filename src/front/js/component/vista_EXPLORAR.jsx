@@ -20,7 +20,7 @@ const VistaExplorar = () => {
         }
 
         const loadChatra = () => {
-            window.ChatraID = 't5fKP896w9NNZy7GZ';
+            window.ChatraID = 'oGnY6G2K9BSSeEnsQ';
             const script = document.createElement('script');
             script.async = true;
             script.src = 'https://call.chatra.io/chatra.js';
