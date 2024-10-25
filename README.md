@@ -1,80 +1,92 @@
-# WebApp boilerplate with React JS and Flask API
+![image](https://github.com/user-attachments/assets/4c86259c-b5ac-4512-8a78-8856aa298e1a)
 
-Build web applications using React.js for the front end and python/flask for your backend API.
+HooBoo es una plataforma centrada en la literatura que conecta a lectores y escritores, fomentando asi una comunidad apasionada por los libros en donde podrán tener acceso a una gran variedad de libros.
 
-- Documentation can be found here: https://start.4geeksacademy.com/starters/react-flask
-- Here is a video on [how to use this template](https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b)
-- Integrated with Pipenv for package managing.
-- Fast deployment to heroku [in just a few steps here](https://start.4geeksacademy.com/backend/deploy-heroku-posgres).
-- Use of .env file.
-- SQLAlchemy integration for database abstraction.
+HooBoo no solo fomenta la lectura, sino que también promueve el crecimiento de nuevos lectores y escritores, ofreciendo una experiencia literaria única.
 
-### 1) Installation:
+### De Donde Nace La Idea
 
-> If you use Github Codespaces (recommended) or Gitpod this template will already come with Python, Node and the Posgres Database installed. If you are working locally make sure to install Python 3.10, Node 
+"La idea inicial de Hooboo era crear una plataforma que combinara la experiencia visual y social de redes como Instagram o Pinterest, pero dedicada exclusivamente a los libros. 
 
-It is recomended to install the backend first, make sure you have Python 3.8, Pipenv and a database engine (Posgress recomended)
+Queríamos que los usuarios pudieran registrarse, subir reseñas de sus libros, publicar reseñas, compartir fotos relacionadas con su pasión literaria, y tener un feed personalizado con las publicaciones de otros usuarios a los que siguen.
 
-1. Install the python packages: `$ pipenv install`
-2. Create a .env file based on the .env.example: `$ cp .env.example .env`
-3. Install your database engine and create your database, depending on your database you have to create a DATABASE_URL variable with one of the possible values, make sure you replace the valudes with your database information:
+La idea de Hooboo surgió porque nos gusta leer y nos dimos cuenta de que no hay muchas plataformas dedicadas a los libros que realmente ofrezcan una experiencia completa. 
 
-| Engine    | DATABASE_URL                                        |
-| --------- | --------------------------------------------------- |
-| SQLite    | sqlite:////test.db                                  |
-| MySQL     | mysql://username:password@localhost:port/example    |
-| Postgress | postgres://username:password@localhost:5432/example |
+Aunque existen sitios como Goodreads, sentimos que hacía falta algo más, especialmente en lo visual y social.
 
-4. Migrate the migrations: `$ pipenv run migrate` (skip if you have not made changes to the models on the `./src/api/models.py`)
-5. Run the migrations: `$ pipenv run upgrade`
-6. Run the application: `$ pipenv run start`
+Queríamos llenar ese vacío, ofreciendo una plataforma que fuera tanto informativa como que englobase todos los aspectos de una red social.
 
-> Note: Codespaces users can connect to psql by typing: `psql -h localhost -U gitpod example`
+### Vista de Login y Registro: 
+Para el registro se añade un nombre de usuario, con el que se personalizará el mensaje de bienvenida. También un correo electrónico y una contraseña que serán sus datos de acceso a la página. Una vez registrado, se mostrará un mensaje de registro exitoso y te redireccionará al formulario de Login. En caso de perder u olvidar la contraseña, tenemos una opción de recuperación de contraseña a través del email de registro. Una vez reseteada la contraseña a través del enlace enviado por email, se redirecciona automáticamente a la página de inicio de sesión.
+<table style="width:100%">
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/ead7164d-b913-4942-ab69-2c6b440226ee" alt="Imagen 1" width="400">
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/662072cd-1c8c-44e7-a120-256ba9400fd0" alt="Imagen 2" width="400">
+    </td>
+  </tr>
+</table>
 
-### Undo a migration
+### Vista para Usuarios no registrdos:
+Pueden explorar libros, utilizar el buscador y acceder a una vista general de los libros. Sin embargo, no tienen acceso a la opción de agregar libros a favoritos ni a la ficha detallada de cada libro.
+También nos enfocamos mucho en la responsividad, en la parte del diseño y la experiencia de usuario, utilizando Bootstrap y CSS para asegurar que la plataforma se vea bien en dispositivos móviles y una variedad de tamaños de pantalla.
 
-You are also able to undo a migration by running
+<table style="width:100%">
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/2acd1259-cdd4-4d28-931e-56a21bf2d23a" alt="Imagen 1" width="400">
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/c89e27ac-476b-420b-8aa7-dac7f931b692" alt="Imagen 2" width="400">
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/7175be5c-f026-4ea2-9700-ca29ac0ebf3e" alt="Imagen 3" width="400">
+    </td>
+  </tr>
+</table>
+Decidimos añadir en el footer para su mayor visibilidad en la pantalla principal, una opción de calificación que se muestra para todos los visitantes al sitio web, con una nota media que sale de los votos de los usuarios registrados.
 
-```sh
-$ pipenv run downgrade
-```
+### Vista para Usuarios registrdos:
+Pueden acceder a funciones adicionales como agregar libros a su lista de favoritos, tanto leídos como por leer (sin distinción), ver información más detallada de los libros (como sinopsis y autor) y utilizar la sección de comentarios visible para todos los usuarios.
 
-### Backend Populate Table Users
+También tenemos nuestras redes sociales conectadas en el footer para un mas fácil acceso. Además tiene varios aspectos: para usuarios no registrados se mantiene visible en todas las vistas, mientras que para los usuarios registrados está la opción de colapsar y descolapsar su vista.
 
-To insert test users in the database execute the following command:
+<table style="width:100%">
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/2822ca4a-b4b7-451f-852c-48f27974e805" alt="Imagen 1" width="400">
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/e4180529-3c4c-4054-a9c2-fe0cbc6ff524" alt="Imagen 2" width="400">
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/1ca8e0c2-b9c6-46c1-83d0-c414e1bbafaf" alt="Imagen 4" width="400">
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/cd3217c1-a408-434c-a763-6efc5eac6e15" alt="Imagen 3" width="400">
+    </td>
+  </tr>
+</table>
+- Los usuarios registrados pueden añadir libros a sus favoritos y personalizar la interfaz con un modo oscuro o claro, que también está disponible para los no registrados.
+- En el perfil, los usuarios registrados pueden cambiar su nombre de usuario, su avatar y su contraseña.
+- Los usuarios pueden compartir los enlaces de libros y reseñas a través de plataformas como Facebook o email, entre otras. 
 
-```sh
-$ flask insert-test-users 5
-```
+### Acerca de Nosotros: 
 
-And you will see the following message:
+![image](https://github.com/user-attachments/assets/43960721-e647-4603-bd83-d53a6212d2b1)
 
-```
-  Creating test users
-  test_user1@test.com created.
-  test_user2@test.com created.
-  test_user3@test.com created.
-  test_user4@test.com created.
-  test_user5@test.com created.
-  Users created successfully!
-```
+### Apis: 
+Otro reto fue integrar correctamente las APIs, decidimos utilizar la API de Google Books para obtener los libros, las imágenes y su descripción. La API de Commento fue la elegida para gestionar la sección de comentarios, y CHATRA la que implementamos para la funcionalidad del chat. Sin embargo, fue una gran oportunidad para aprender cómo trabajar con datos externos y asegurar una buena experiencia de usuario.
 
-### **Important note for the database and the data inside it**
+### Bases De Datos: 
+En la parte de backend de la base de datos, guardamos los datos de registro de los usuarios, y generamos un token asociado para validación entre las diferentes vistas.
 
-Every Github codespace environment will have **its own database**, so if you're working with more people eveyone will have a different database and different records inside it. This data **will be lost**, so don't spend too much time manually creating records for testing, instead, you can automate adding records to your database by editing ```commands.py``` file inside ```/src/api``` folder. Edit line 32 function ```insert_test_data``` to insert the data according to your model (use the function ```insert_test_users``` above as an example). Then, all you need to do is run ```pipenv run insert-test-data```.
+Con el fin de asegurar una buena experiencia al usuario, decidimos implementar una base de datos de respaldo, con un listado de libros, sinopsis, fotos de portada e información en general para el caso de que la aplicación de Google books no estuviese disponible, poder mostrar siempre un catalogo de libros.
 
-### Front-End Manual Installation:
+También una base de calificación que guarda los votos de los usarios registrados que quieran valorar HooBoo, muestra una media tanto numérica como visual a través de las estrellas, y el total de votantes.
 
--   Make sure you are using node version 14+ and that you have already successfully installed and runned the backend.
-
-1. Install the packages: `$ npm install`
-2. Start coding! start the webpack dev server `$ npm run start`
-
-## Publish your website!
-
-This boilerplate it's 100% read to deploy with Render.com and Heroku in a matter of minutes. Please read the [official documentation about it](https://start.4geeksacademy.com/deploy).
-
-### Contributors
 
 This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
 
