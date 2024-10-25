@@ -86,8 +86,3 @@ En la parte de backend de la base de datos, guardamos los datos de registro de l
 Con el fin de asegurar una buena experiencia al usuario, decidimos implementar una base de datos de respaldo, con un listado de libros, sinopsis, fotos de portada e información en general para el caso de que la aplicación de Google books no estuviese disponible, poder mostrar siempre un catalogo de libros.
 
 También una base de calificación que guarda los votos de los usarios registrados que quieran valorar HooBoo, muestra una media tanto numérica como visual a través de las estrellas, y el total de votantes.
-
-
-This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
-
-You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
