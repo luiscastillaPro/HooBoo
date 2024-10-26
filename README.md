@@ -1,12 +1,14 @@
+# HooBoo
 ![image](https://github.com/user-attachments/assets/4c86259c-b5ac-4512-8a78-8856aa298e1a)
 
-HooBoo es una plataforma centrada en la literatura que conecta a lectores y escritores, fomentando asi una comunidad apasionada por los libros en donde podrán tener acceso a una gran variedad de libros.
+## Descripción del Proyecto
 
+HooBoo es una plataforma interactiva diseñada para conectar a lectores y escritores a través de una experiencia social centrada en la literatura. Los usuarios pueden explorar una amplia variedad de libros, compartir reseñas, y conectarse con otros lectores, mientras disfrutan de un diseño visualmente atractivo y adaptable.
 HooBoo no solo fomenta la lectura, sino que también promueve el crecimiento de nuevos lectores y escritores, ofreciendo una experiencia literaria única.
 
-### De Donde Nace La Idea
+## Motivación e Historia de HooBoo
 
-"La idea inicial de Hooboo era crear una plataforma que combinara la experiencia visual y social de redes como Instagram o Pinterest, pero dedicada exclusivamente a los libros. 
+La idea inicial de Hooboo era crear una plataforma que combinara la experiencia visual y social de redes como Instagram o Pinterest, pero dedicada exclusivamente a los libros. 
 
 Queríamos que los usuarios pudieran registrarse, subir reseñas de sus libros, publicar reseñas, compartir fotos relacionadas con su pasión literaria, y tener un feed personalizado con las publicaciones de otros usuarios a los que siguen.
 
@@ -16,7 +18,14 @@ Aunque existen sitios como Goodreads, sentimos que hacía falta algo más, espec
 
 Queríamos llenar ese vacío, ofreciendo una plataforma que fuera tanto informativa como que englobase todos los aspectos de una red social.
 
-### Vista de Login y Registro: 
+## Funcionalidades Principales
+- **Exploración de Libros**: Todos los usuarios pueden navegar y buscar libros en una biblioteca visualmente atractiva.
+- **Interacción Social**: Los usuarios registrados pueden añadir libros a favoritos, comentar, y compartir reseñas.
+- **Personalización**: Opción de cambiar entre modo claro y oscuro.
+- **Gestión de Perfil**: Los usuarios pueden personalizar su avatar, nombre de usuario y configuración de privacidad.
+- **Calificación y Opinión del Usuario**: Sistema de calificación visible para todos los visitantes, que recopila y muestra una media basada en los votos de los usuarios.
+
+## Vista de Login y Registro: 
 Para el registro se añade un nombre de usuario, con el que se personalizará el mensaje de bienvenida. También un correo electrónico y una contraseña que serán sus datos de acceso a la página. Una vez registrado, se mostrará un mensaje de registro exitoso y te redireccionará al formulario de Login. En caso de perder u olvidar la contraseña, tenemos una opción de recuperación de contraseña a través del email de registro. Una vez reseteada la contraseña a través del enlace enviado por email, se redirecciona automáticamente a la página de inicio de sesión.
 <table style="width:100%">
   <tr>
@@ -28,8 +37,9 @@ Para el registro se añade un nombre de usuario, con el que se personalizará el
     </td>
   </tr>
 </table>
+*Formulario de inicio de sesión para usuarios registrados.*
 
-### Vista para Usuarios no registrdos:
+## Vista para Usuarios no registrdos:
 Pueden explorar libros, utilizar el buscador y acceder a una vista general de los libros. Sin embargo, no tienen acceso a la opción de agregar libros a favoritos ni a la ficha detallada de cada libro.
 También nos enfocamos mucho en la responsividad, en la parte del diseño y la experiencia de usuario, utilizando Bootstrap y CSS para asegurar que la plataforma se vea bien en dispositivos móviles y una variedad de tamaños de pantalla.
 
@@ -48,7 +58,7 @@ También nos enfocamos mucho en la responsividad, en la parte del diseño y la e
 </table>
 Decidimos añadir en el footer para su mayor visibilidad en la pantalla principal, una opción de calificación que se muestra para todos los visitantes al sitio web, con una nota media que sale de los votos de los usuarios registrados.
 
-### Vista para Usuarios registrdos:
+## Vista para Usuarios registrados:
 Pueden acceder a funciones adicionales como agregar libros a su lista de favoritos, tanto leídos como por leer (sin distinción), ver información más detallada de los libros (como sinopsis y autor) y utilizar la sección de comentarios visible para todos los usuarios.
 
 También tenemos nuestras redes sociales conectadas en el footer para un mas fácil acceso. Además tiene varios aspectos: para usuarios no registrados se mantiene visible en todas las vistas, mientras que para los usuarios registrados está la opción de colapsar y descolapsar su vista.
@@ -73,16 +83,17 @@ También tenemos nuestras redes sociales conectadas en el footer para un mas fá
 - En el perfil, los usuarios registrados pueden cambiar su nombre de usuario, su avatar y su contraseña.
 - Los usuarios pueden compartir los enlaces de libros y reseñas a través de plataformas como Facebook o email, entre otras. 
 
+## Tecnologías y APIs
+- **Google Books API**: Permite acceder a una biblioteca extensa de libros, con detalles como descripción, imágenes y autores.
+- **Commento**: Gestiona el sistema de comentarios para fomentar la interacción de los usuarios.
+- **CHATRA**: Integración de un chat en vivo para mejorar la experiencia de usuario.
+
+## Bases De Datos: 
+- **Base de Datos de Usuarios**: Almacena credenciales, preferencias de usuario, y tokens de autenticación.
+- **Base de Datos de Libros de Respaldo**: Incluye información relevante de los libros para garantizar disponibilidad aún sin conexión a Google Books.
+- **Base de Datos de Calificaciones**: Recopila y promedia calificaciones de usuarios, proporcionando feedback valioso.
+
 ### Acerca de Nosotros: 
 
 ![image](https://github.com/user-attachments/assets/43960721-e647-4603-bd83-d53a6212d2b1)
 
-### Apis: 
-Otro reto fue integrar correctamente las APIs, decidimos utilizar la API de Google Books para obtener los libros, las imágenes y su descripción. La API de Commento fue la elegida para gestionar la sección de comentarios, y CHATRA la que implementamos para la funcionalidad del chat. Sin embargo, fue una gran oportunidad para aprender cómo trabajar con datos externos y asegurar una buena experiencia de usuario.
-
-### Bases De Datos: 
-En la parte de backend de la base de datos, guardamos los datos de registro de los usuarios, y generamos un token asociado para validación entre las diferentes vistas.
-
-Con el fin de asegurar una buena experiencia al usuario, decidimos implementar una base de datos de respaldo, con un listado de libros, sinopsis, fotos de portada e información en general para el caso de que la aplicación de Google books no estuviese disponible, poder mostrar siempre un catalogo de libros.
-
-También una base de calificación que guarda los votos de los usarios registrados que quieran valorar HooBoo, muestra una media tanto numérica como visual a través de las estrellas, y el total de votantes.
